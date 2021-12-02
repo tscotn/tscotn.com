@@ -1,5 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Outfit&display=swap');
 
 html {
     padding: 0;
@@ -7,7 +9,7 @@ html {
 }
 
 body {
-    font-family: monospace;
+    font-family: 'Lato', 'Outfit', sans-serif;
     /* display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 20% 80%; */
@@ -17,6 +19,10 @@ body {
 body * {
     padding: .5rem .25rem;
     margin: 0;
+}
+
+.line {
+    width: 44rem;
 }
 
 hr {
@@ -31,8 +37,16 @@ h1, h2, h3, nav a {
     font-size: 2rem;
 }
 
+.card a {
+    padding: 0;
+}
+
 h1 {
     font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.75rem;
 }
 
 header img {
@@ -48,6 +62,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-family: monospace;
     /* text-align: center; */
 }
 
@@ -57,27 +72,83 @@ footer {
 }
 
 .card {
-    width: 20rem;
-    height: 10rem;
-    border: solid;
-    border-color: black;
-    border-radius: 1rem;
+    width: 42rem;
+    /* height: 40rem; */
+    /* border: solid;
+    border-color: black; */
+    /* border-radius: 1rem; */
     margin: 0 1rem 1rem 0;
 }
 
 .card p:first-child {
-    text-align: center;
+    /* text-align: center; */
     width: 100%;
     padding-top: 0;
+    font-size: 1.25rem;
+}
+
+.card p {
+    width: 95%;
+}
+
+main p {
+    line-height: 1.5rem;
 }
 
 .section {
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
 }
 
 p {
     width: 30rem;
+}
+
+.portfolio p {
+    padding-top: 0;
+    padding-left: 1rem;
+}
+
+.portfolio h2, .portfolio a {
+    padding-bottom: 0;
+}
+
+
+/* IMAGES */
+
+.right {
+    float: right;
+    object-fit: cover;
+}
+
+.left {
+    float: left;
+    object-fit: cover;
+}
+
+#crossstich {
+    width: 12rem;
+    height: 12rem;
+    margin: .5rem;
+}
+
+#heroku {
+    width:inherit;
+    height: 10rem;
+    object-position: bottom;
+}
+
+.fill {
+    width: -webkit-fill-available;
+}
+
+.lp {
+    width: 40%;
+}
+
+.lp_code {
+    width: 55%;
 }
 
 @media screen and (max-device-width: 480px) {
@@ -87,7 +158,8 @@ p {
     }
 
     .card {
-        width: 8rem;
+        /* width: 8rem; */
+        width: 100%;
         height: auto;
     }
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>tscotn</title>
+</head>
+<body>
+    <header>
+        <img src='../assets/hero.png'>
+        <nav>
+            <a href='../index.html'>About me</a>
+            <a href='../pages/portfolio.html'>Portfolio</a>
+            <a href='../Resume.pdf' target='_blank'>Resume</a>
+            <a href='../pages/contact.html'>Contact</a>
+        </nav>
+        <footer>
+            <p>Scot Nielson * 2021</p>
+        </footer>
+    </header>
+    <main>
+        <h1>Scot Nielson</h1>
+        <hr class='line'>
+        <h2><a href='portfolio.html'><<< back</a></h2>
+        <div class='card'>
+            <p>Chess Displacement Visualization</p>
+            <p>Last spring, the BYU Data Science Club hosted a Data Visualization hackathon with a prize of $75 to whomever could get the most upvotes on a post to the <a target='_blank' href='https://www.reddit.com/r/dataisbeautiful/'>r/dataisbeautiful Reddit channel</a>. This is the visualization I made and entered to the competition, and which won first place with about 20,000 upvotes. </p>
+            <img class='fill' src='../assets/chess.png'>
+            <p>I had been playing a lot of chess at the time, and was thinking about how I often come across sports statistics making claims like "x player has thrown footballs a total of d distance in their career", or "this cyclist has biked around the world 4 times", etc. I wanted to apply that line of thought to chess and wondered how far the world chess champion, Magnus Carlsen, has physically picked up and moved his chess pieces. In this case I represented that distance in meters, which spurred a bit of controversy on the Reddit post, but that may have contributed to its spread.</p>
+            <p>I had to make several assumptions in developing this analysis and visualization. Firstly, I had to estimate the average size of the squares on chess boards and assume that those used by Magnus Carlsen over his career followed that distribution. I ended up using 2 inches for the average size of a square while recognizing that a significant percentage of chess games are played online, but that the majority of tournament-level games are played over the board, which made up the dataset.</p>
+            <img class='fill' src='../assets/chess_analysis.png'>
+            <p>A more thorough explanation of the steps I took are in the comments of the <a target='_blank' href='https://www.reddit.com/r/dataisbeautiful/comments/lje2s4/total_distance_traveled_by_gm_magnus_carlsens/'>Reddit post</a>. My data came from <a target='_blank' href='http://www.pgnmentor.com/files.html'>this website</a>, which I wrote a short program to process in order to calculate the distances traveled by each piece, converting it to this <a target='_blank' href='https://drive.google.com/file/d/1t7PZEkSu2Tz68LymGptMDIwmMETBy0Lk/view'>tabular structure</a>. I re-ran this analysis for a handful of other significant players, also posted on Reddit. Interestingly, the distributions appear pretty similar. I also made my <a target='_blank' href='https://colab.research.google.com/drive/1yhkhL3fRKdOdbve32RpUi7LjqaonYw5A?usp=sharing'>analysis notebook</a> publicly accessible on Google Colab, check it out to see how I made this visualization!</p>
+        </div>
+    </main>
+</body>
+</html>

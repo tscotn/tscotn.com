@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>tscotn</title>
+</head>
+<body>
+    <header>
+        <img src='../assets/hero.png'>
+        <nav>
+            <a href='../index.html'>About me</a>
+            <a href='../pages/portfolio.html'>Portfolio</a>
+            <a href='../Resume.pdf' target='_blank'>Resume</a>
+            <a href='../pages/contact.html'>Contact</a>
+        </nav>
+        <footer>
+            <p>Scot Nielson * 2021</p>
+        </footer>
+    </header>
+    <main>
+        <h1>Scot Nielson</h1>
+        <hr class='line'>
+        <h2><a href='portfolio.html'><<< back</a></h2>
+            <div class='card'>
+                <p>"Embroidefy" Spotify Machine Embroidery Code Converter</p>
+                <img class='left fill' src='../assets/embroidefy_heroku.png'>
+                <img id='crossstich' class='right' src='../assets/crossstich.JPG'>
+                <p>This past summer a friend came to me with a problem. She loved her new embroidery machine, but it takes a long time to digitize images for embroidery and the software that can do it is fairly expensive. I didn't know much about embroidery (except for the cross-stitch of a famous chess game I made one winter break), but I felt there had to be a solution out there somewhere for embroidery hobbyists.</p>
+                <p>This led to me discovering and learning to use <a target="_blank" href="https://inkstitch.org/">Inkstitch</a>, an open source embroidery digitization software. Once I learned how to digitize images by hand and started designing some simple fonts, I realized the process could be automated for repetitive images, like Spotify Codes.</p>
+                <img class='left fill' src='../assets/embroidefy_desktop.png'>
+                <p>That's when I made Embroidefy. This barebones app, built with Python and Flask, takes either a Spotify media share link or a URI and converts the cooresponding Spotify Scannable code to an embroidery-safe format. I created a <a target="_blank" href="https://embroidefy.herokuapp.com/">browser version</a> on Heroku and a <a target="_blank" href="https://github.com/tscotn/Embroidefy">Desktop version</a> made with Tkinter that's available for download on Github. After converting a code, you'll be able to open the returned SVG file in InkStitch to scale, customize, and export your digitized file to the desired format, such as .PES.</p>
+                <img class='fill' src="../assets/spotify_code.png">
+                <p>The process used by the app is fairly simple. First, it retrieves the Spotify code using a scannables link with custom query parameters, like <a target="_blank" href='https://scannables.scdn.co/uri/plain/png/000000/white/640/spotify:playlist:4HMGMig6Q2MshPzhgPNgdC'>this one</a>. It then determines the ratios of each bar of the code to the maximum bar, which correspond to manually digitized bars I only had to create once. Using those ratios it stitches together the digitized pieces into a final file. Feel free to try it out!</p>
+            </div>
+    </main>
+</body>
+</html>
